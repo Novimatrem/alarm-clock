@@ -35,10 +35,14 @@ if ! [ "$TIMEMINUTETIMEKEEPING" == "59" ]; then exit; fi
 
 # Try to account for delays, to start making noise at exactly 10:00:00 AM
 sleep 45s
-sleep 8s
 
 # This sleep is "college-protection", to avoid the alarm running in class IF I'd already woken up after 7 AM, before 10 AM.
 sleep 10800s # It waits 3 hours in seconds, from when the start is made at 7 AM. For a final wake time of 10AM, else, doesn't run
+
+# Wake the system (find a command for this, seems rare/non-existent)
+echo "wake the system command goes here"
+
+sleep 8s
 
 # Switch sound device to the speakers so I can actually hear the alarm clock
 pacmd set-default-sink "alsa_output.pci-0000_01_00.1.hdmi-stereo"
@@ -46,6 +50,9 @@ sleep 4s
 
 # Unmute the speakers
 amixer set Master unmute
+amixer -q -D pulse sset Master unmute
+pactl set-sink-mute 0 0
+pactl set-sink-mute 1 0
 
 # Speaker warming
 cd "$(dirname "$0")"
