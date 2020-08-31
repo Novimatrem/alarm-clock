@@ -167,7 +167,7 @@ sleep 2s
 
 
 # Daily fortune
-TODAYFORT="$(fortune)"
+TODAYFORT="$(fortune -a)"
 nohup zenity --warning --text "$(echo $TODAYFORT)" & nohup espeak -p 66 -s 150 -g 3 "$(echo $TODAYFORT)"
 
 echo ""
