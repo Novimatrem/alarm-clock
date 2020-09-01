@@ -68,9 +68,9 @@ sleep 2s
 
 # Set volume to reasonable percentage to wake me up, but not to deafen the neighborhood
 echo ""
-echo "Speaker volume to 100%!"
+echo "Speaker volume to 40%!"
 echo ""
-amixer -D pulse sset Master 100%
+amixer -D pulse sset Master 40%
 
 function flashing {
 sleep 0.1
