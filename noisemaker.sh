@@ -3,7 +3,7 @@
 # Novimatrem's alarm clock script, for the waking up. - Licensed under the GNU GPL v3.0.
 # (epilepsy warning)
 # REQUIRES and DEPENDS UPON zenity, espeak, paplay, bash, and a working 'fortune' command.
-# The alarm currently triggers at 10am by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
+# The alarm currently triggers at 07am by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # License information
 # This product is licensed under the GNU GPL v3.0.
@@ -36,16 +36,13 @@ if ! [ "$TIMEMINUTETIMEKEEPING" == "59" ]; then exit; fi
 # Try to account for delays, to start making noise at exactly 10:00:00 AM
 sleep 45s
 
-# This sleep is "college-protection", to avoid the alarm running in class IF I'd already woken up after 7 AM, before 10 AM.
-sleep 10800s # It waits 3 hours in seconds, from when the start is made at 7 AM. For a final wake time of 10AM, else, doesn't run
-
 # Wake the system (find a command for this, seems rare/non-existent)
 echo "wake the system command goes here"
 
 sleep 8s
 
-# Switch sound device to the speakers so I can actually hear the alarm clock
-pacmd set-default-sink "alsa_output.pci-0000_01_00.1.hdmi-stereo"
+# Switch sound device
+#pacmd set-default-sink "alsa_output.pci-0000_01_00.1.hdmi-stereo"
 sleep 4s
 
 # Unmute the speakers
