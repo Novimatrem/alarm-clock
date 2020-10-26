@@ -33,7 +33,7 @@ TIMEMINUTETIMEKEEPING="$( date +'%M')"
 if ! [ "$TIMEHOURTIMEKEEPING" == "06" ]; then exit; fi
 if ! [ "$TIMEMINUTETIMEKEEPING" == "59" ]; then exit; fi
 
-# Try to account for delays, to start making noise at exactly 10:00:00 AM
+# Try to account for delays, to start making noise at exactly 07:00:00 AM
 sleep 45s
 
 # Wake the system (find a command for this, seems rare/non-existent)
