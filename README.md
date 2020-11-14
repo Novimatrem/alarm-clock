@@ -5,7 +5,7 @@ Novimatrem's alarm clock script, for the waking up. (epilepsy warning) - License
 
 REQUIRES and DEPENDS UPON ``zenity``, ``espeak``, ``paplay``, ``bash``, and a working ``fortune`` command.
 
-# The alarm currently triggers at 07am by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
+# The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # Installation
 Clone the contents of this repo into a folder where it will be safely accessible in the future; ``git clone https://gitlab.com/Novimatrem/alarm-clock``

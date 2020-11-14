@@ -3,7 +3,7 @@
 # Novimatrem's alarm clock script, for the waking up. - Licensed under the GNU GPL v3.0.
 # (epilepsy warning)
 # REQUIRES and DEPENDS UPON zenity, espeak, paplay, bash, and a working 'fortune' command.
-# The alarm currently triggers at 07am by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
+# The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # License information
 # This product is licensed under the GNU GPL v3.0.
@@ -35,6 +35,9 @@ if ! [ "$TIMEMINUTETIMEKEEPING" == "59" ]; then exit; fi
 
 # Try to account for delays, to start making noise at exactly 07:00:00 AM
 sleep 45s
+
+# HACK: actually, let's wake up at 8 instead.
+sleep 3600s # 1 hour in seconds
 
 # Wake the system (find a command for this, seems rare/non-existent)
 echo "wake the system command goes here"
