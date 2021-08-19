@@ -166,7 +166,7 @@ espeak "It's $(date +”%A”)"
 sleep 2s
 
 # Open to-do list (uncomment and change path to where your to-do list in PDF form is)
-#sleep 0s && nohup atril /home/novidesktop/Dropbox/Private-Novimatrem/my-stuff/docs/Schedule_Weekly_24_Hours_EDITED_300ppi_v20.pdf && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
+#sleep 0s && nohup atril /home/$(whoami)/Dropbox/Private-Novimatrem/my-stuff/docs/Schedule_Weekly_24_Hours_EDITED_300ppi_v20.pdf && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
 
 # Daily fortune
 #TODAYFORT="$(fortune -a)"
