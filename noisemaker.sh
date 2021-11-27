@@ -57,12 +57,14 @@ pactl set-sink-mute 1 0
 # Speaker warming
 cd "$(dirname "$0")"
 paplay $(pwd)/silence.wav # Play a sound so my desktop speakers won't miss the first 3 seconds of audio if left for a while.
+aplay $(pwd)/silence.wav # Play a sound so my desktop speakers won't miss the first 3 seconds of audio if left for a while.
 espeak -p 66 -s 200 ". ... ."
 sleep 2s
 
 # Speaker warming 2
 cd "$(dirname "$0")"
 paplay $(pwd)/silence.wav # Play a sound so my desktop speakers won't miss the first 3 seconds of audio if left for a while.
+aplay $(pwd)/silence.wav # Play a sound so my desktop speakers won't miss the first 3 seconds of audio if left for a while.
 espeak -p 66 -s 200 ". ... ."
 sleep 2s
 
@@ -105,6 +107,7 @@ echo Playing fly.wav!
 echo ""
 echo "pwd is $(pwd), User- make sure fly.wav is there."
 paplay --volume=67036 $(pwd)/fly.wav &
+aplay --volume=67036 $(pwd)/fly.wav &
 espeak -p 66 -s 200 ". ... ."
 espeak -p 66 -s 150 "Wake up... . ... . "
 
@@ -151,14 +154,19 @@ echo ""
 pkill paplay
 killall paplay
 kill -9 $(pgrep paplay)
+pkill aplay
+killall aplay
+kill -9 $(pgrep aplay)
 
 # Amazing speech synthesis, this is.
 sleep 1s
 paplay $(pwd)/silence.wav # Play a sound so my desktop speakers won't miss the first 3 seconds of audio if left for a while.
+aplay $(pwd)/silence.wav # Play a sound so my desktop speakers won't miss the first 3 seconds of audio if left for a while.
 espeak -p 66 -s 200 ". ... ."
 sleep 2s
 espeak -p 66 -s 200 ". ... ."
 paplay $(pwd)/silence.wav
+aplay $(pwd)/silence.wav
 sleep 2s
 espeak "Good morning! . ... . ...remember to check your to do list. . ... . ..."
 sleep 1s

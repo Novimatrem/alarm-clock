@@ -51,6 +51,9 @@ echo ""
 pkill paplay
 killall paplay
 kill -9 $(pgrep paplay)
+pkill aplay
+killall aplay
+kill -9 $(pgrep aplay)
 
 echo ""
 
