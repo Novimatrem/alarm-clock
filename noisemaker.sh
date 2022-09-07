@@ -39,7 +39,7 @@ sleep 45s
 # HACK: actually, let's wake up at 8 instead.
 sleep 3600s # 1 hour in seconds
 
-# it turns out, the latest sunset in 2021 was at 8:25.
+# it turns out, the latest sunrise in 2021 was at 8:25.
 # i never want to wake up in the dark, so let's ensure I wake at 8:30 instead.
 sleep 1800s # 30 minutes in seconds
 
