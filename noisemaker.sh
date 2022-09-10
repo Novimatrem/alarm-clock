@@ -104,7 +104,8 @@ sleep 0.1
 
 # Fluctuate brightness to alert me
 flashing
-
+cd "$(dirname "$0")"
+sleep 0s && nohup bash /opt/alarm-clock/alsoradio.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # Play fly.wav with paplay
 echo ""
 echo Playing fly.wav!
