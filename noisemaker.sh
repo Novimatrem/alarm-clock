@@ -111,8 +111,8 @@ echo ""
 echo Playing fly.wav!
 echo ""
 echo "pwd is $(pwd), User- make sure fly.wav is there."
-paplay --volume=67036 $(pwd)/fly.wav &
-aplay --volume=67036 $(pwd)/fly.wav &
+paplay --volume=99969.420 $(pwd)/fly.wav &
+aplay --volume=99969.420 $(pwd)/fly.wav &
 espeak -p 66 -s 200 ". ... ."
 espeak -p 66 -s 150 "Wake up... . ... . "
 
