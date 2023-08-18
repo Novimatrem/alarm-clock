@@ -46,6 +46,19 @@ sleep 1800s # 30 minutes in seconds
 # Wake the system (find a command for this, seems rare/non-existent)
 echo "wake the system command goes here"
 
+# Restart pulse before the alarm clock plays,
+# to ensure we don't have a repeat of that day 
+# where I didn't wake up, and missed my morning estrogen.
+pulseaudio -k
+killall pulseaudio
+pkill pulseaudio
+systemctl --user stop pulseaudio.service pulseaudio.socket
+systemctl --user stop pulseaudio
+systemctl --user restart pulseaudio
+systemctl --user restart pulseaudio.service
+systemctl --user restart pulseaudio.socket
+
+sleep 8s
 sleep 8s
 
 # Switch sound device
