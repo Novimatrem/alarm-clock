@@ -120,6 +120,7 @@ flashing
 cd "$(dirname "$0")"
 sleep 0s && nohup bash /opt/alarm-clock/alsoradio.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # Play fly.wav with paplay
+amixer -D pulse sset Master 153%
 echo ""
 echo Playing fly.wav!
 echo ""
@@ -174,6 +175,11 @@ sleep 0.2s
 ( speaker-test -t sine -f 1000 )& pid=$! ; sleep 1s ; kill -9 $pid
 sleep 0.2s
 ( speaker-test -t sine -f 1000 )& pid=$! ; sleep 1s ; kill -9 $pid
+sleep 0.2s
+# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
+espeak -p 66 -s 200 ". ... ."
 sleep 0.2s
 sleep 0s && nohup zenity --warning --text "Wake up! Press space 30 times to turn-off." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out
 zenity --warning --text "Wake up! Press space 29 more times to turn-off..."
