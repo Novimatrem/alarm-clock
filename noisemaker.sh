@@ -90,6 +90,7 @@ echo ""
 echo "Speaker volume to a %!"
 echo ""
 amixer -D pulse sset Master 153%
+pactl set-sink-volume @DEFAULT_SINK@ 153%
 
 function flashing {
 sleep 0.1
