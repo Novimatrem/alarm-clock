@@ -55,6 +55,31 @@ sleep 0s
 # This entire script is a while true loop.
 while true
 do
+clear
+# Attempt to keep the system awake so the script can actually do its purpose
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.settings-daemon.plugins.power sleep-display-ac 0
+gsettings set org.gnome.settings-daemon.plugins.power sleep-display-battery 0
+xset -dpms
+xset s noblank
+xset s off
+gsettings set org.gnome.settings-daemon.plugins.power active false
+gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+setterm -blank 0
+setterm -blank 0 -powerdown 0
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout '0' && gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout '0'
+killall mate-screensaver
+pkill mate-screensaver
+killall xscreensaver
+pkill xscreensaver
+killall xfce4-screensaver
+pkill xfce4-screensaver
+# /Attempt to keep the system awake so the script can actually do its purpose
+clear
 echo "Current time hour is:"
 # Get the current time in 24 hours as a number.
 TIMEHOURTIMEKEEPING="$( date +'%H')"
