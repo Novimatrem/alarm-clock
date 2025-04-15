@@ -89,8 +89,8 @@ sleep 2s
 echo ""
 echo "Speaker volume to a %!"
 echo ""
-amixer -D pulse sset Master 53%
-pactl set-sink-volume @DEFAULT_SINK@ 53%
+amixer -D pulse sset Master 40%
+pactl set-sink-volume @DEFAULT_SINK@ 40%
 
 function flashing {
 sleep 0.1
@@ -121,7 +121,7 @@ flashing
 cd "$(dirname "$0")"
 sleep 0s && nohup bash /opt/alarm-clock/alsoradio.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # Play fly.wav with paplay
-amixer -D pulse sset Master 53%
+amixer -D pulse sset Master 40%
 echo ""
 echo Playing fly.wav!
 echo ""
