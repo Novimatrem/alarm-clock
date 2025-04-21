@@ -120,6 +120,7 @@ sleep 0.1
 flashing
 cd "$(dirname "$0")"
 sleep 0s && nohup bash /opt/alarm-clock/alsoradio.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
+sleep 0s && nohup bash /opt/alarm-clock/alsogame.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # Play fly.wav with paplay
 amixer -D pulse sset Master 40%
 echo ""
