@@ -129,6 +129,8 @@ echo ""
 echo "pwd is $(pwd), User- make sure fly.wav is there."
 paplay --volume=999969.420 $(pwd)/fly.wav &
 aplay --volume=999969.420 $(pwd)/fly.wav &
+paplay --volume=999969.420 $(pwd)/fly.wav &
+aplay --volume=999969.420 $(pwd)/fly.wav &
 espeak -p 66 -s 200 ". ... ."
 espeak -p 66 -s 150 "Wake up... . ... . "
 
@@ -181,7 +183,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -192,7 +195,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -203,7 +207,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -214,7 +219,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -225,7 +231,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -236,7 +243,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -247,7 +255,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -258,7 +267,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -269,7 +279,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
@@ -280,7 +291,8 @@ sleep 0.2s
 
 # m
 sleep 0.2s
-# this is what you get for waking up at 2pm
+paplay --volume=999969.420 $(pwd)/m.wav &
+aplay --volume=999969.420 $(pwd)/m.wav &
 paplay --volume=999969.420 $(pwd)/m.wav &
 aplay --volume=999969.420 $(pwd)/m.wav &
 espeak -p 66 -s 200 ". ... ."
