@@ -57,6 +57,8 @@ systemctl --user stop pulseaudio
 systemctl --user restart pulseaudio
 systemctl --user restart pulseaudio.service
 systemctl --user restart pulseaudio.socket
+killall pulseaudio
+killall pipewire
 
 sleep 8s
 sleep 8s
