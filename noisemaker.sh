@@ -61,6 +61,7 @@ killall pulseaudio
 killall pipewire
 
 sleep 8s
+pulseaudio --start
 sleep 8s
 
 # Switch sound device
