@@ -1,6 +1,6 @@
 cd "$(dirname "$0")"
 sleep 160s
-killall vlc
-pkill vlc
+killall clementine
+pkill clementine
 shopt -s expand_aliases
-vlc --qt-start-minimized http://relay.slayradio.org:8000/
+clementine --play --volume 100 http://relay.slayradio.org:8000/
