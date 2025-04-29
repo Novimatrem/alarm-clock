@@ -361,7 +361,7 @@ espeak -p 66 -s 200 ". ... ."
 paplay $(pwd)/silence.wav
 aplay $(pwd)/silence.wav
 sleep 2s
-espeak "Good morning! . ... . ...remember to check your to do list. . ... . ..."
+espeak "Good morning! . ... . ...remember to check your calendar. . ... . ..."
 sleep 1s
 espeak "It's $(date +”%A”)"
 sleep 2s
