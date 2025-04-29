@@ -61,6 +61,8 @@ killall pulseaudio
 killall pipewire
 
 sleep 8s
+pipewire &
+pipewire-pulse &
 pulseaudio --start
 pulseaudio
 sleep 8s
