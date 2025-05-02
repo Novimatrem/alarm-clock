@@ -357,6 +357,7 @@ kill -9 $(pgrep paplay)
 pkill aplay
 killall aplay
 kill -9 $(pgrep aplay)
+alarm-clock-applet --stop-all
 
 # Amazing speech synthesis, this is.
 sleep 1s
