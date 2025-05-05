@@ -60,9 +60,9 @@ clear
 gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-display-ac 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-display-battery 0
-xset -dpms
-xset s noblank
-xset s off
+#DISABLED DUE TO CAUSING FPS ISSUES #xset -dpms
+#DISABLED DUE TO CAUSING FPS ISSUES #xset s noblank
+#DISABLED DUE TO CAUSING FPS ISSUES #xset s off
 gsettings set org.gnome.settings-daemon.plugins.power active false
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
