@@ -41,6 +41,13 @@ TIMEMINUTETIMEKEEPING="$( date +'%M')"
 # Wake the system (find a command for this, seems rare/non-existent)
 echo "wake the system command goes here"
 echo ""
+
+# begin log
+cd "$(dirname "$0")"
+touch log.txt
+echo "==========================================" >> log.txt
+echo "Noisemaker started at $(date)" >> log.txt
+
 # Restart pulse before the alert plays,
 # to ensure we don't have a repeat of that day 
 # where I didn't wake up, and missed my morning estrogen.
@@ -150,9 +157,11 @@ echo Playing fly.wav!
 echo ""
 echo "pwd is $(pwd), User- make sure fly.wav is there."
 
+echo "About to play the sound at $(date)" >> log.txt
 
 echo 0s && nohup paplay fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
 
+echo "Played the sound at $(date)" >> log.txt
 
 # Fluctuate brightness to alert me
 flashing
@@ -321,6 +330,7 @@ echo 0.2s
 
 sleep 15s
 notify-send "Calendar event!"
+echo "About to open zenity $(date)" >> log.txt
 echo 0s && nohup zenity --warning --text "Calendar event! Hold escape for 30 moments to turn-off." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out
 zenity --warning --text "Calendar event! Hold escape for 29 more moments to turn-off..."
 zenity --warning --text "Calendar event! Hold escape for 28 more moments to turn-off..."
@@ -351,6 +361,7 @@ zenity --warning --text "Calendar event! Hold escape for 4 more moments to turn-
 zenity --warning --text "Calendar event! Hold escape for 3 more moments to turn-off..."
 zenity --warning --text "Calendar event! Hold escape for 2 more moments to turn-off..."
 zenity --warning --text "Calendar event! Hold escape for 1 more moment to turn-off..."
+echo "User dealt with the zenitys $(date)" >> log.txt
 echo ""
 rm -rf $HOME/nohup.out
 rm -rf $(pwd)/nohup.out
@@ -397,5 +408,7 @@ echo ""
 
 killall espeak
 killall speech-dispatcher
+
+echo "Exiting noisemaker at $(date)" >> log.txt
 
 exit
