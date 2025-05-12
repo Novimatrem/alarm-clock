@@ -2,7 +2,7 @@
 
 # Novimatrem's alarm clock script, for the waking up. - Licensed under the GNU GPL v3.0.
 # (epilepsy warning)
-# REQUIRES and DEPENDS UPON zenity, espeak, paplay, bash, and a working 'fortune' command.
+# REQUIRES and DEPENDS UPON kdialog, espeak, paplay, bash, and a working 'fortune' command.
 # The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # License information
@@ -31,7 +31,7 @@ clear
 
 echo "Novimatrem's alarm clock script, for the waking up. - Licensed under the GNU GPL v3.0."
 echo "(epilepsy warning)"
-echo "REQUIRES and DEPENDS UPON zenity, espeak, paplay, bash, and a working 'fortune' command."
+echo "REQUIRES and DEPENDS UPON kdialog, espeak, paplay, bash, and a working 'fortune' command."
 echo "The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment."
 
 echo ""

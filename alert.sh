@@ -2,7 +2,7 @@
 
 # Novimatrem's alarm clock script, for the waking up. - Licensed under the GNU GPL v3.0.
 # (epilepsy warning)
-# REQUIRES and DEPENDS UPON zenity, espeak, paplay, bash, and a working 'fortune' command.
+# REQUIRES and DEPENDS UPON kdialog, espeak, paplay, bash, and a working 'fortune' command.
 # The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # License information
@@ -37,13 +37,13 @@ if ! [ "$TIMEHOURTIMEKEEPING" == "06" ]; then exit; fi
 # If time hour is at 07 (7 am), continue.
 if [ "$TIMEHOURTIMEKEEPING" == "06" ]; then echo "Running noisemaker!"; fi
 
-# Play sound and show zenity box
+# Play sound and show kdialog box
 if [ "$TIMEHOURTIMEKEEPING" == "06" ]; then sleep 5400s && bash noisemaker.sh; fi
 
 # If not time hour 07 (7 am), sleep repeatedly until it changes.
 if ! [ "$TIMEHOURTIMEKEEPING" == "06" ]; then while ! $TIMEHOURTIMEKEEPING == "*"; do sleep 1; done; fi
 
-# The user dealt with Zenity, we kill music BUT NOT THE WHOLE SCRIPT, then resume as normal checking for time.
+# The user dealt with kdialog, we kill music BUT NOT THE WHOLE SCRIPT, then resume as normal checking for time.
 echo ""
 
 echo "Killing paplay HARD to stop fly.wav."
