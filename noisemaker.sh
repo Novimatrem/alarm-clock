@@ -329,6 +329,15 @@ echo 0.2s
 # /
 
 sleep 15s
+
+# get this shit out of the way so i can press the button
+killall update-manager
+pkill update-manager
+killall lubuntu-update
+pkill lubuntu-update
+killall update-notifier
+pkill update-notifier
+
 notify-send "Calendar event!"
 echo "About to open kdialog $(date)" >> log.txt
 echo 0s && nohup kdialog --msgbox "Calendar event! Hold escape for 30 moments to turn-off." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out
