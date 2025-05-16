@@ -88,6 +88,7 @@ pactl set-sink-mute 1 0
 # unmute everything
 amixer set Master unmute
 amixer -q -D pulse sset Master unmute
+pactl set-sink-mute @DEFAULT_SINK@ false
 pactl set-sink-mute 0 0
 pactl set-sink-mute 1 0
 pactl set-sink-mute 2 0
