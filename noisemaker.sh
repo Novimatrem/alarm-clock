@@ -85,7 +85,30 @@ amixer -q -D pulse sset Master unmute
 pactl set-sink-mute 0 0
 pactl set-sink-mute 1 0
 
+# unmute everything
+amixer set Master unmute
+amixer -q -D pulse sset Master unmute
+pactl set-sink-mute 0 0
+pactl set-sink-mute 1 0
+pactl set-sink-mute 2 0
+pactl set-sink-mute 3 0
+pactl set-sink-mute 4 0
+pactl set-sink-mute 5 0
+pactl set-sink-mute 6 0
+pactl set-sink-mute 7 0
+pactl set-sink-mute 8 0
+pactl set-sink-mute 9 0
+pactl set-sink-mute 10 0
+pactl set-sink-mute 11 0
+pactl set-sink-mute 12 0
+pactl set-sink-mute 13 0
+pactl set-sink-mute 14 0
+pactl set-sink-mute 15 0
 
+# if you ever end up with more than 16 output devices you may need to add more to this
+# but that will never happen
+
+# /unmute everything
 
 echo ""
 
