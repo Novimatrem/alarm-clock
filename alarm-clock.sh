@@ -52,6 +52,10 @@ chmod +x alarm-clock.sh
 
 sleep 0s
 
+notify-send "Note: ${0##*/} functionality requires system to remain unmuted and unlocked"
+cd "$(dirname "$0")"
+paplay $(pwd)/warning-beep.wav
+
 # This entire script is a while true loop.
 while true
 do

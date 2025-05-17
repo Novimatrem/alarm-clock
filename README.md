@@ -5,6 +5,8 @@ Novimatrem's alarm clock script, for the waking up. (epilepsy warning) - License
 
 REQUIRES and DEPENDS UPON ``kdialog``, ``espeak``, ``paplay``, ``bash``, and a working ``fortune`` command.
 
+Note: script functionality requires system to remain unmuted and unlocked
+
 # The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # Installation
