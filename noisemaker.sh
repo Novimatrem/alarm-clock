@@ -171,10 +171,12 @@ echo 0.1
 
 # Fluctuate brightness to alert me
 flashing
+# IF YOU ARE OF THE ALARM CLOCK SCRIPT, AND THUS THIS FILE IS IN YOUR FOLDER, ALSO RUN THE RADIO ALONGSIDE
 cd "$(dirname "$0")"
-
-
-
+echo "Entering the alsoradio script at $(date)" >> log.txt
+sleep 0s && nohup bash $(pwd)/alsoradio.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
+# alsogame removed due to issues with the script that fixes my monitor
+echo "Are past the alsoradio script in noisemaker.sh at $(date)" >> log.txt
 amixer -D pulse sset Master 45%
 echo ""
 echo Playing fly.wav!
