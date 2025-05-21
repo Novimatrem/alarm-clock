@@ -425,8 +425,43 @@ kdialog --msgbox "Almost turned off! Hold escape for 4 more moments to turn-off.
 kdialog --msgbox "Almost turned off! Hold escape for 3 more moments to turn-off..."
 kdialog --msgbox "Almost turned off! Hold escape for 2 more moments to turn-off..."
 kdialog --msgbox "Almost turned off! Hold escape for 1 more moment to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 29 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 28 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 27 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 26 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 25 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 24 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 23 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 22 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 21 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 20 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 19 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 18 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 17 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 16 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 15 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 14 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 13 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 12 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 11 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 10 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 9 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 8 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 7 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 6 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 5 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 4 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 3 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 2 more moments to turn-off..."
+kdialog --msgbox "Shutting off! Hold escape for 1 more moment to turn-off..."
 echo "User dealt with the kdialogs $(date)" >> log.txt
 echo ""
+
+
+notify-send "Note: Shave hands+face & clean glasses."
+cd "$(dirname "$0")"
+paplay $(pwd)/warning-beep.wav
+
 rm -rf $HOME/nohup.out
 rm -rf $(pwd)/nohup.out
 echo 0s
