@@ -53,9 +53,26 @@ chmod +x alarm-clock.sh
 # delay to make sure it starts at the correct time to actually work
 sleep 20s
 
-notify-send "Note: ${0##*/} functionality requires system to remain unmuted and unlocked"
+notify-send "${0##*/} only works when unmuted and unlocked"
 cd "$(dirname "$0")"
 paplay $(pwd)/warning-beep.wav
+
+
+sleep 20s
+# i am never having pulse cuck me again
+clear
+sleep 1.5s
+clear
+notify-send "${0##*/} Speaker Test: Front Left"
+speaker-test -t wav -l 1 -c 2 &
+sleep 1.5s
+notify-send "${0##*/} Speaker Test: Front Right"
+sleep 1.5s
+sleep 0.5s
+echo ""
+clear
+# /i am never having pulse cuck me again
+
 
 # This entire script is a while true loop.
 while true
