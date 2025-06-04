@@ -177,6 +177,11 @@ echo "Entering the alsoradio script at $(date)" >> log.txt
 sleep 0s && nohup bash $(pwd)/alsoradio.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # alsogame removed due to issues with the script that fixes my monitor
 echo "Are past the alsoradio script in noisemaker.sh at $(date)" >> log.txt
+cd "$(dirname "$0")"
+echo "Entering the alsonote script at $(date)" >> log.txt
+sleep 0s && nohup bash $(pwd)/alsonote.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
+# alsogame removed due to issues with the script that fixes my monitor
+echo "Are past the alsonote script in noisemaker.sh at $(date)" >> log.txt
 amixer -D pulse sset Master 45%
 echo ""
 echo Playing fly.wav!
@@ -457,8 +462,9 @@ kdialog --msgbox "Shutting off! Hold escape for 1 more moment to turn-off..."
 echo "User dealt with the kdialogs $(date)" >> log.txt
 echo ""
 
-
-notify-send "Note: Shave hands+face & clean glasses."
+sleep 1s
+for i in {1..5}; do sleep 0.4s && notify-send "Note: Shave hands+face & clean glasses" && sleep 0.4s && notify-send "+ brush hair + fill bottle + dress + boots." && sleep 0.4s && notify-send " " && sleep 0.4s; done
+sleep 1s
 cd "$(dirname "$0")"
 paplay $(pwd)/warning-beep.wav
 
