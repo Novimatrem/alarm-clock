@@ -468,6 +468,8 @@ sleep 1s
 cd "$(dirname "$0")"
 paplay $(pwd)/warning-beep.wav
 
+sleep 0s && nohup kdialog --msgbox "Note: Shave hands+face & clean glasses + brush hair + fill bottle + dress + boots.\n \nIf you have some time, try consider everything you have done, that which you've achieved, and how far you've come, you deserve to appreciate your progress.\n \nTry to treat yourself with the love you deserve." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
+
 rm -rf $HOME/nohup.out
 rm -rf $(pwd)/nohup.out
 echo 0s
