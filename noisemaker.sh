@@ -191,6 +191,9 @@ echo "pwd is $(pwd), User- make sure fly.wav is there."
 echo "About to play the sound at $(date)" >> log.txt
 killall java
 killall minecraft-launcher
+
+for i in {1..5}; do sleep 0.4s && espeak "allow me to attempt to have even a small piece of personal independence in my entire life..." && sleep 0.4s; done
+
 echo 0s && nohup paplay fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
 
 echo "Played the sound at $(date)" >> log.txt
