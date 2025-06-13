@@ -70,9 +70,11 @@ pulseaudio
 
 # give everything enough time to start up or else the script fails and halts.
 echo ""
-echo "Giving everything 15 seconds to start up which is enough time or else the script fails and halts..."
+echo "Giving everything 30 seconds to start up which is enough time or else the script fails and halts..."
 echo ""
 pulseaudio -k
+sleep 15s
+pulseaudio -D # linux mint fix
 sleep 15s
 # /give everything enough time to start up or else the script fails and halts.
 echo ""
