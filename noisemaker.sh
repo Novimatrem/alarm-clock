@@ -191,6 +191,7 @@ echo "pwd is $(pwd), User- make sure fly.wav is there."
 echo "About to play the sound at $(date)" >> log.txt
 killall java
 killall minecraft-launcher
+espeak "An alarm sound is about to start. This alarm will play once, only, and ... or ... will end when dismissed. It will never loop repeatedly."
 
 for i in {1..5}; do sleep 0.4s && espeak "allow me to attempt to have even a small piece of personal independence in my entire life..." && sleep 0.4s; done
 
@@ -471,6 +472,8 @@ for i in {1..5}; do sleep 0.4s && notify-send "Note: Shave hands+face & clean gl
 sleep 1s
 cd "$(dirname "$0")"
 paplay $(pwd)/warning-beep.wav
+
+espeak "The alarm has been shut-off."
 
 sleep 0s && nohup kdialog --msgbox "Note: Shave hands+face & clean glasses + brush hair + fill bottle + dress + boots.\n \nIf you have some time, try consider everything you have done, that which you've achieved, and how far you've come, you deserve to appreciate your progress.\n \nTry to treat yourself with the love you deserve." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 
