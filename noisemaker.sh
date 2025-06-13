@@ -191,9 +191,18 @@ echo "pwd is $(pwd), User- make sure fly.wav is there."
 echo "About to play the sound at $(date)" >> log.txt
 killall java
 killall minecraft-launcher
+amixer -D pulse sset Master 64%
+pactl set-sink-volume @DEFAULT_SINK@ 64%
+amixer -D pulse sset Master 64%
+
 espeak "An alarm sound is about to start. This alarm will play once, only, and ... or ... will end when dismissed. It will never loop repeatedly."
 
 for i in {1..5}; do sleep 0.4s && espeak "allow me to attempt to have even a small piece of personal independence in my entire life..." && sleep 0.4s; done
+
+
+amixer -D pulse sset Master 45%
+pactl set-sink-volume @DEFAULT_SINK@ 45%
+amixer -D pulse sset Master 45%
 
 echo 0s && nohup paplay fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
 
