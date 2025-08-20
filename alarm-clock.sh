@@ -25,6 +25,9 @@
 
 # Script;Start
 
+# delay boot by 60s
+sleep 60s
+
 clear
 
 # INTRO MESSAGE
