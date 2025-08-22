@@ -206,7 +206,7 @@ amixer -D pulse sset Master 45%
 pactl set-sink-volume @DEFAULT_SINK@ 45%
 amixer -D pulse sset Master 45%
 
-echo 0s && nohup paplay fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
+echo 0s && nohup paplay --volume 45000 fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
 
 echo "Played the sound at $(date)" >> log.txt
 
