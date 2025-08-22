@@ -189,8 +189,8 @@ cd "$(dirname "$0")"
 echo ""
 echo "Speaker volume to a %!"
 echo ""
-amixer -D pulse sset Master 45%
-pactl set-sink-volume @DEFAULT_SINK@ 45%
+amixer -D pulse sset Master 64%
+pactl set-sink-volume @DEFAULT_SINK@ 64%
 
 function flashing {
 echo 0.1
@@ -229,7 +229,7 @@ echo "Entering the alsonote script at $(date)" >> log.txt
 sleep 0s && nohup bash $(pwd)/alsonote.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # alsogame removed due to issues with the script that fixes my monitor
 echo "Are past the alsonote script in noisemaker.sh at $(date)" >> log.txt
-amixer -D pulse sset Master 45%
+amixer -D pulse sset Master 64%
 echo ""
 echo Playing fly.wav!
 echo ""
@@ -242,14 +242,14 @@ amixer -D pulse sset Master 64%
 pactl set-sink-volume @DEFAULT_SINK@ 64%
 amixer -D pulse sset Master 64%
 
-espeak "An alarm sound is about to start. This alarm will play once, only, and ... or ... will end when dismissed. It will never loop repeatedly."
+#espeak "An alarm sound is about to start. This alarm will play once, only, and ... or ... will end when dismissed. It will never loop repeatedly."
 
-for i in {1..5}; do sleep 0.4s && espeak "allow me to attempt to have even a small piece of personal independence in my entire life..." && sleep 0.4s; done
+#for i in {1..5}; do sleep 0.4s && espeak "allow me to attempt to have even a small piece of personal independence in my entire life..." && sleep 0.4s; done
 
 
-amixer -D pulse sset Master 45%
-pactl set-sink-volume @DEFAULT_SINK@ 45%
-amixer -D pulse sset Master 45%
+amixer -D pulse sset Master 64%
+pactl set-sink-volume @DEFAULT_SINK@ 64%
+amixer -D pulse sset Master 64%
 
 echo 0s && nohup paplay --volume 45000 fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
 
@@ -432,106 +432,106 @@ pkill update-notifier
 
 notify-send "Calendar event!"
 echo "About to open kdialog $(date)" >> log.txt
-echo 0s && nohup kdialog --msgbox "Calendar event! Hold escape for 30 moments to turn-off." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out
-kdialog --msgbox "Calendar event! Hold escape for 29 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 28 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 27 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 26 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 25 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 24 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 23 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 22 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 21 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 20 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 19 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 18 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 17 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 16 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 15 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 14 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 13 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 12 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 11 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 10 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 9 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 8 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 7 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 6 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 5 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 4 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 3 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 2 more moments to turn-off..."
-kdialog --msgbox "Calendar event! Hold escape for 1 more moment to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 29 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 28 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 27 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 26 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 25 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 24 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 23 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 22 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 21 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 20 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 19 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 18 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 17 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 16 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 15 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 14 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 13 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 12 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 11 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 10 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 9 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 8 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 7 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 6 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 5 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 4 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 3 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 2 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! Hold escape for 1 more moment to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 29 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 28 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 27 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 26 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 25 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 24 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 23 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 22 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 21 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 20 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 19 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 18 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 17 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 16 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 15 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 14 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 13 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 12 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 11 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 10 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 9 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 8 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 7 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 6 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 5 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 4 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 3 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 2 more moments to turn-off..."
-kdialog --msgbox "Shutting off! Hold escape for 1 more moment to turn-off..."
+echo 0s && nohup kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 30 moments to turn-off." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 29 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 28 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 27 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 26 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 25 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 24 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 23 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 22 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 21 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 20 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 19 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 18 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 17 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 16 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 15 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 14 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 13 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 12 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 11 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 10 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 9 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 8 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 7 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 6 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 5 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 4 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 3 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 2 more moments to turn-off..."
+kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 1 more moment to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 29 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 28 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 27 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 26 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 25 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 24 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 23 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 22 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 21 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 20 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 19 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 18 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 17 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 16 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 15 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 14 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 13 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 12 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 11 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 10 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 9 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 8 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 7 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 6 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 5 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 4 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 3 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 2 more moments to turn-off..."
+kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 1 more moment to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 29 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 28 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 27 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 26 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 25 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 24 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 23 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 22 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 21 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 20 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 19 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 18 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 17 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 16 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 15 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 14 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 13 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 12 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 11 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 10 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 9 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 8 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 7 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 6 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 5 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 4 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 3 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 2 more moments to turn-off..."
+kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 1 more moment to turn-off..."
 echo "User dealt with the kdialogs $(date)" >> log.txt
 echo ""
 
 sleep 1s
-for i in {1..5}; do sleep 0.4s && notify-send "Note: Shave hands+face & clean glasses" && sleep 0.4s && notify-send "+ brush hair + fill bottle + dress + boots." && sleep 0.4s && notify-send " " && sleep 0.4s; done
+#for i in {1..5}; do sleep 0.4s && notify-send "Note: Shave hands+face & clean glasses" && sleep 0.4s && notify-send "+ brush hair + fill bottle + dress + boots." && sleep 0.4s && notify-send " " && sleep 0.4s; done
 sleep 1s
 cd "$(dirname "$0")"
-paplay $(pwd)/warning-beep.wav
+#paplay $(pwd)/warning-beep.wav
 
-espeak "The alarm has been shut-off."
+#espeak "The alarm has been shut-off."
 
-sleep 0s && nohup kdialog --msgbox "Note: Shave hands+face & clean glasses + brush hair + fill bottle + dress + boots.\n \nIf you have some time, try consider everything you have done, that which you've achieved, and how far you've come, you deserve to appreciate your progress.\n \nTry to treat yourself with the love you deserve." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
+#sleep 0s && nohup kdialog --msgbox "Note: Shave hands+face & clean glasses + brush hair + fill bottle + dress + boots.\n \nIf you have some time, try consider everything you have done, that which you've achieved, and how far you've come, you deserve to appreciate your progress.\n \nTry to treat yourself with the love you deserve." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 
 rm -rf $HOME/nohup.out
 rm -rf $(pwd)/nohup.out
@@ -578,6 +578,9 @@ echo ""
 
 killall espeak
 killall speech-dispatcher
+
+paplay $(pwd)/warning-beep.wav
+espeak "dismissed."
 
 echo "Exiting noisemaker at $(date)" >> log.txt
 

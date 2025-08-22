@@ -1,0 +1,13 @@
+==========================================
+Noisemaker started at Fri Aug 22 16:15:42 BST 2025
+Entering the alsoradio script at Fri Aug 22 16:16:15 BST 2025
+Are past the alsoradio script in noisemaker.sh at Fri Aug 22 16:16:15 BST 2025
+Entering the alsonote script at Fri Aug 22 16:16:15 BST 2025
+Are past the alsonote script in noisemaker.sh at Fri Aug 22 16:16:15 BST 2025
+Hello from the internals of the alsoradio script is here Fri Aug 22 16:16:15 BST 2025
+Hello from the internals of the alsonote script is here Fri Aug 22 16:16:15 BST 2025
+About to play the sound at Fri Aug 22 16:16:15 BST 2025
+Played the sound at Fri Aug 22 16:16:15 BST 2025
+About to open kdialog Fri Aug 22 16:16:30 BST 2025
+User dealt with the kdialogs Fri Aug 22 16:16:58 BST 2025
+Exiting noisemaker at Fri Aug 22 16:17:02 BST 2025
