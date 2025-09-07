@@ -87,6 +87,9 @@ echo ""
 # HACK: sleep for an extra half hour to see if that is enough to have me feel rested
 sleep 1800s # half an hour in seconds
 
+# wake at exactly 09:05:00 am
+sleep 627s
+
 # begin log
 cd "$(dirname "$0")"
 touch log.txt
