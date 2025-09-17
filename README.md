@@ -3,13 +3,15 @@ Novimatrem's alarm clock script, for the waking up. (epilepsy warning) - License
 
 [![Platform: GNU/Linux](https://img.shields.io/badge/platform-GNU/Linux-blue.svg)](www.kernel.org/linux.html) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-REQUIRES and DEPENDS UPON ``kdialog``, ``espeak``, ``paplay``, ``bash``, and a working ``fortune`` command.
+REQUIRES and DEPENDS UPON ``kdialog``, ``espeak``, ``paplay``, ``libnotify-bin``, ``bash``, and a working ``fortune`` command.
 
 Note: script functionality requires system to remain unmuted and unlocked
 
 # The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # Installation
+Ensure sound playback is set up & working as-in on your machine, my script will do nothing if your system isn't already capable of playing back audio.
+
 This script relies on pulseaudio's ability to respawn itself upon death to be functional. First enter the following command into your Terminal, to enable that functionality.
 ```sudo sed -i 's/^; autospawn = yes/autospawn = yes/' /etc/pulse/client.conf```
 
