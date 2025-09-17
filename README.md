@@ -26,6 +26,21 @@ For sound to play while the system is locked, in elementary OS, you need to run 
 
 ``sudo adduser $(whoami) audio``
 
+# Help! My distro is weird with autostart
+Hi, so if you're on a distro where autostarting things isn't as straight forward, this might work for you.
+
+This solution hinges on two components: installing a GUI to actually set the autostart program, and a .desktop file that you install to select inside of that GUI.
+
+You will need to take ``launch-ac.desktop`` from this repo's main directory, and copy it into your ``$HOME/.local/share/applications/`` folder.
+
+Then you need to install ``gnome-tweaks`` and/or ``gnome-tweaks-tool`` onto your system, ideally the native normal version using the regular default first package manager, nothing fancy or sanboxed like flatpak/snap/etc.
+
+On Debian, for me, this takes the form of the following command: ``sudo apt install -y gnome-tweaks gnome-tweak-tool``
+
+Once you have that .desktop file in that folder, and installed GNOME Tweaks, simply run GNOME Tweaks, to go the Startup Applications page inside of it, and add launch-ac as a startup application.
+
+Congratulations. The alarm clock should now boot on startup of your device.
+
 # License (code)
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
 
