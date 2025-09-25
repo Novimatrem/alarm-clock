@@ -3,7 +3,7 @@ Novimatrem's alarm clock script, for the waking up. (epilepsy warning) - License
 
 [![Platform: GNU/Linux](https://img.shields.io/badge/platform-GNU/Linux-blue.svg)](www.kernel.org/linux.html) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-REQUIRES and DEPENDS UPON ``kdialog``, ``espeak``, ``paplay``, ``libnotify-bin``, ``bash``, and a working ``fortune`` command.
+REQUIRES and DEPENDS UPON (**INSTALL ALL THESE**): ``pulseaudio``, ``kdialog``, ``espeak``, ``paplay``, ``libnotify-bin``, ``bash``, and a working ``fortune`` command.
 
 Note: script functionality requires system to remain unmuted and unlocked
 
