@@ -423,7 +423,27 @@ echo 0.2s
 echo 0.2s
 # /
 
-sleep 15s
+# ensure we're only seeing kdialogs relating to the script that is currently executing. anything from the past was clearly ignored and should now be automatically dismissed.
+
+# note: hacky
+
+# kill all the kdialogs my scripts ever will tend to run
+# we don't "check" if it's already running here, because my other scripts are likely to spawn new ones right after they die anyway
+clear
+for run in {1..321}; do killall kdialog; done
+
+# we sleep for 7 seconds to allow any remaining kdialogs that are pending opening to do that
+sleep 7s
+
+# try to sense and kill the remaining kdialogs that happened to pop open as a result of the previous killall and my other bash
+if pgrep -x "kdialog" > /dev/null
+then
+    echo "kdialog was still running. killing them once more and then continuing." && for run in {1..321}; do touch /home/$(whoami)/Desktop/${0##*/}.txt && echo "Slowdown detected in ${0##*/}! stream of kdialogs fighting stream of killalls! increase the number three hundred and twenty one to a higher number in both places it's located in that script" >> /home/$(whoami)/Desktop/${0##*/}-error-continuity.txt && killall kdialog; done
+fi
+# ideally the slowdown mentioned above will never happen because the first part will kill all the kdialogs. IF SLOWDOWN DETECTED HAPPENS EVER, INCREASE THE NUMBER (three hundred and twenty one) TO HIGHER, IN BOTH PLACES IT'S LOCATED ^^^.
+
+# account for timing
+sleep 7s
 
 # get this shit out of the way so i can press the button
 killall update-manager
