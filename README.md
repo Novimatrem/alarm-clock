@@ -7,6 +7,8 @@ REQUIRES and DEPENDS UPON (**INSTALL ALL THESE**): ``pulseaudio``, ``kdialog``, 
 
 Note: script functionality requires system to remain unmuted and unlocked
 
+Bonus: installing ``gltron`` means it will be launched alongside the alarm triggering for even more epic mornings.
+
 # The alarm currently triggers at a set time by default and there is no simple way to adjust this outside of editing the bash scripts manually in multiple places, at the moment.
 
 # Installation

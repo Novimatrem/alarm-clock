@@ -258,6 +258,9 @@ echo 0s && nohup paplay --volume 45000 fly.wav && rm -rf $HOME/nohup.out && rm -
 
 echo "Played the sound at $(date)" >> log.txt
 
+# absolute worst case scenario backup
+sleep 0s && nohup gltron && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
+
 # Fluctuate brightness to alert me
 flashing
 
