@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=launch-ac
+Comment=launch-ac
+Exec=bash /opt/alarm-clock/alarm-clock.sh
+Terminal=false
+Type=Application
+Path=/opt/alarm-clock/
+StartupNotify=false

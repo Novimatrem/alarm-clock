@@ -45,6 +45,12 @@ Once you have that .desktop file in that folder, and installed GNOME Tweaks, sim
 
 Congratulations. The alarm clock should now boot on startup of your device.
 
+# Windows version
+
+Ensure you have installed the required dependency: Git Bash (https://github.com/git-for-windows/git/releases)
+
+Then run alarm-clock\windows-version\run-background-win.vbs
+
 # License (code)
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
 
