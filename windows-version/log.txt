@@ -1,0 +1,72 @@
+==========================================
+Noisemaker started at Sun Apr 26 06:59:56 GMTST 2026
+Entering the alsoradio script at Sun Apr 26 07:00:27 GMTST 2026
+Are past the alsoradio script in noisemaker.sh at Sun Apr 26 07:00:27 GMTST 2026
+Entering the alsonote script at Sun Apr 26 07:00:27 GMTST 2026
+Are past the alsonote script in noisemaker.sh at Sun Apr 26 07:00:27 GMTST 2026
+Hello from the internals of the alsoradio script is here Sun Apr 26 07:00:27 GMTST 2026
+About to play the sound at Sun Apr 26 07:00:27 GMTST 2026
+Hello from the internals of the alsonote script is here Sun Apr 26 07:00:27 GMTST 2026
+Played the sound at Sun Apr 26 07:00:31 GMTST 2026
+Goodbye from the internals of the alsonote script is here Sun Apr 26 07:01:47 GMTST 2026
+Goodbye from the internals of the alsoradio script is here Sun Apr 26 07:03:07 GMTST 2026
+==========================================
+Noisemaker started at Sun Apr 26 07:00:00 GMTST 2026
+Entering the alsoradio script at Sun Apr 26 07:00:30 GMTST 2026
+Are past the alsoradio script in noisemaker.sh at Sun Apr 26 07:00:30 GMTST 2026
+Entering the alsonote script at Sun Apr 26 07:00:30 GMTST 2026
+Are past the alsonote script in noisemaker.sh at Sun Apr 26 07:00:30 GMTST 2026
+Hello from the internals of the alsoradio script is here Sun Apr 26 07:00:30 GMTST 2026
+About to play the sound at Sun Apr 26 07:00:30 GMTST 2026
+Hello from the internals of the alsonote script is here Sun Apr 26 07:00:30 GMTST 2026
+Played the sound at Sun Apr 26 07:00:34 GMTST 2026
+About to open kdialog Sun Apr 26 07:00:51 GMTST 2026
+User dealt with the kdialogs Sun Apr 26 07:00:51 GMTST 2026
+Exiting noisemaker at Sun Apr 26 07:00:54 GMTST 2026
+Goodbye from the internals of the alsonote script is here Sun Apr 26 07:01:50 GMTST 2026
+Goodbye from the internals of the alsoradio script is here Sun Apr 26 07:03:10 GMTST 2026
+==========================================
+Noisemaker started at Sun Apr 26 06:59:28 GMTST 2026
+Entering the alsoradio script at Sun Apr 26 06:59:58 GMTST 2026
+Are past the alsoradio script in noisemaker.sh at Sun Apr 26 06:59:58 GMTST 2026
+Entering the alsonote script at Sun Apr 26 06:59:58 GMTST 2026
+Are past the alsonote script in noisemaker.sh at Sun Apr 26 06:59:58 GMTST 2026
+Hello from the internals of the alsoradio script is here Sun Apr 26 06:59:58 GMTST 2026
+About to play the sound at Sun Apr 26 06:59:58 GMTST 2026
+Hello from the internals of the alsonote script is here Sun Apr 26 06:59:58 GMTST 2026
+Played the sound at Sun Apr 26 07:00:02 GMTST 2026
+About to open kdialog Sun Apr 26 07:00:19 GMTST 2026
+User dealt with the kdialogs Sun Apr 26 07:00:25 GMTST 2026
+Exiting noisemaker at Sun Apr 26 07:00:27 GMTST 2026
+Goodbye from the internals of the alsonote script is here Sun Apr 26 07:01:18 GMTST 2026
+Goodbye from the internals of the alsoradio script is here Sun Apr 26 07:02:38 GMTST 2026
+==========================================
+Noisemaker started at Sun Apr 26 06:59:32 GMTST 2026
+Entering the alsoradio script at Sun Apr 26 07:00:02 GMTST 2026
+Are past the alsoradio script in noisemaker.sh at Sun Apr 26 07:00:02 GMTST 2026
+Entering the alsonote script at Sun Apr 26 07:00:02 GMTST 2026
+Are past the alsonote script in noisemaker.sh at Sun Apr 26 07:00:02 GMTST 2026
+Hello from the internals of the alsoradio script is here Sun Apr 26 07:00:02 GMTST 2026
+About to play the sound at Sun Apr 26 07:00:02 GMTST 2026
+Hello from the internals of the alsonote script is here Sun Apr 26 07:00:02 GMTST 2026
+Played the sound at Sun Apr 26 07:00:06 GMTST 2026
+About to open kdialog Sun Apr 26 07:00:23 GMTST 2026
+User dealt with the kdialogs Sun Apr 26 07:00:30 GMTST 2026
+Exiting noisemaker at Sun Apr 26 07:00:32 GMTST 2026
+Goodbye from the internals of the alsonote script is here Sun Apr 26 07:01:22 GMTST 2026
+Goodbye from the internals of the alsoradio script is here Sun Apr 26 07:02:42 GMTST 2026
+==========================================
+Noisemaker started at Sun Apr 26 06:59:42 GMTST 2026
+Entering the alsoradio script at Sun Apr 26 07:00:13 GMTST 2026
+Are past the alsoradio script in noisemaker.sh at Sun Apr 26 07:00:13 GMTST 2026
+Entering the alsonote script at Sun Apr 26 07:00:13 GMTST 2026
+Are past the alsonote script in noisemaker.sh at Sun Apr 26 07:00:13 GMTST 2026
+Hello from the internals of the alsoradio script is here Sun Apr 26 07:00:13 GMTST 2026
+About to play the sound at Sun Apr 26 07:00:13 GMTST 2026
+Hello from the internals of the alsonote script is here Sun Apr 26 07:00:13 GMTST 2026
+Played the sound at Sun Apr 26 07:00:17 GMTST 2026
+About to open kdialog Sun Apr 26 07:00:33 GMTST 2026
+User dealt with the kdialogs Sun Apr 26 07:01:06 GMTST 2026
+Exiting noisemaker at Sun Apr 26 07:01:08 GMTST 2026
+Goodbye from the internals of the alsonote script is here Sun Apr 26 07:01:33 GMTST 2026
+Goodbye from the internals of the alsoradio script is here Sun Apr 26 07:02:53 GMTST 2026

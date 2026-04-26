@@ -35,10 +35,10 @@ TIMEHOURTIMEKEEPING="$( date +'%H')"
 if ! [ "$TIMEHOURTIMEKEEPING" == "06" ]; then exit; fi
 
 # If time hour is at 07 (7 am), continue.
-if [ "$TIMEHOURTIMEKEEPING" == "06" ]; then echo "Running noisemaker!"; fi
+if [ "$TIMEHOURTIMEKEEPING" == "06" ]; then echo "Running noisemaker windows version!" && pwd; fi
 
 # Play sound and show kdialog box
-if [ "$TIMEHOURTIMEKEEPING" == "06" ]; then sleep 5100s && bash noisemaker.sh; fi
+if [ "$TIMEHOURTIMEKEEPING" == "06" ]; then sleep 0s && bash noisemaker.sh; fi
 
 # If not time hour 07 (7 am), sleep repeatedly until it changes.
 if ! [ "$TIMEHOURTIMEKEEPING" == "06" ]; then while ! $TIMEHOURTIMEKEEPING == "*"; do sleep 1; done; fi

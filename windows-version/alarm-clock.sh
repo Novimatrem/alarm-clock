@@ -48,6 +48,7 @@ echo ""
 echo "This product is licensed under the GNU GPL v3.0."
 echo "( https://www.gnu.org/licenses/gpl-3.0.en.html )"
 cd "$(dirname "$0")"
+cd windows-version
 echo ""
 ls
 echo ""
@@ -60,10 +61,13 @@ chmod +x noisemaker.sh
 chmod +x alarm-clock.sh
 
 # delay to make sure it starts at the correct time to actually work
+echo "Starting up..."
+echo ""
 sleep 20s
 
 notify-send "${0##*/} only works when unmuted and unlocked"
 cd "$(dirname "$0")"
+cd windows-version
 paplay $(pwd)/warning-beep.wav
 
 
