@@ -261,6 +261,8 @@ echo 0s && nohup paplay --volume 45000 fly.wav && rm -rf $HOME/nohup.out && rm -
 
 sleep 18000s # 5 hours in minutes, so the alarm goes off at mid-day.
 
+sleep 30s # account for lag so we go off at exactly 12:00:00 mid-day
+
 powershell -c "(New-Object Media.SoundPlayer fly.wav).PlaySync();" &
 
 echo "Played the sound at $(date)" >> log.txt
