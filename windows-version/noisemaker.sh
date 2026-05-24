@@ -259,9 +259,9 @@ amixer -D pulse sset Master 64%
 
 echo 0s && nohup paplay --volume 45000 fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
 
-sleep 18000s # 5 hours in minutes, so the alarm goes off at mid-day.
+sleep 10800s # 5 hours in minutes, so the alarm goes off at 10 am
 
-sleep 30s # account for lag so we go off at exactly 12:00:00 mid-day
+sleep 30s # account for lag so we go off at exactly 10:00:00 mid-day
 
 powershell -c "(New-Object Media.SoundPlayer fly.wav).PlaySync();" &
 
@@ -603,3 +603,4 @@ espeak "dismissed."
 echo "Exiting noisemaker at $(date)" >> log.txt
 
 exit
+
