@@ -85,13 +85,14 @@ echo ""
 #⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 
 # HACK: sleep for an extra half hour to see if that is enough to have me feel rested
-sleep 1800s # half an hour in seconds
+sleep 0s # half an hour in seconds
 
 # wake at exactly 09:05:00 am
-sleep 627s
+sleep 0s
 
 # begin log
 cd "$(dirname "$0")"
+cd windows-version
 touch log.txt
 echo "==========================================" >> log.txt
 echo "Noisemaker started at $(date)" >> log.txt
@@ -169,7 +170,7 @@ set -x
 
 # Speaker warming
 cd "$(dirname "$0")"
-
+cd windows-version
 
 
 
@@ -183,7 +184,7 @@ echo ""
 
 # Speaker warming 2
 cd "$(dirname "$0")"
-
+cd windows-version
 
 
 #echo 2s
@@ -223,11 +224,13 @@ echo 0.1
 flashing
 # IF YOU ARE OF THE ALARM CLOCK SCRIPT, AND THUS THIS FILE IS IN YOUR FOLDER, ALSO RUN THE RADIO ALONGSIDE
 cd "$(dirname "$0")"
+cd windows-version
 echo "Entering the alsoradio script at $(date)" >> log.txt
 sleep 0s && nohup bash $(pwd)/alsoradio.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # alsogame removed due to issues with the script that fixes my monitor
 echo "Are past the alsoradio script in noisemaker.sh at $(date)" >> log.txt
 cd "$(dirname "$0")"
+cd windows-version
 echo "Entering the alsonote script at $(date)" >> log.txt
 sleep 0s && nohup bash $(pwd)/alsonote.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown && echo ""
 # alsogame removed due to issues with the script that fixes my monitor
@@ -255,6 +258,25 @@ pactl set-sink-volume @DEFAULT_SINK@ 64%
 amixer -D pulse sset Master 64%
 
 echo 0s && nohup paplay --volume 45000 fly.wav && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown
+
+sleep 3600s # 1 hours in seconds, so the alarm goes off at 8 am
+
+sleep 30s # account for lag so we go off at exactly 10:00:00 mid-day
+
+powershell -c "(New-Object Media.SoundPlayer fly.wav).PlaySync();" &
+
+(powershell.exe -c '$player = New-Object System.Media.SoundPlayer "C:\Windows\Media\Alarm01.wav"; $player.PlayLooping(); $end = (Get-Date).AddSeconds(45); while ((Get-Date) -lt $end) { [console]::beep((Get-Random -Minimum 2500 -Maximum 4500), (Get-Random -Minimum 50 -Maximum 200)) }; $player.Stop()') >/dev/null 2>&1 &
+
+(powershell.exe -c '$end = (Get-Date).AddSeconds(45); while ((Get-Date) -lt $end) { [console]::beep(2500, 300); [console]::beep(2000, 300) }') >/dev/null 2>&1 &
+
+
+
+(powershell.exe -c '$end=(Get-Date).AddSeconds(45); while((Get-Date)-lt $end){[console]::beep(4000,120);[console]::beep(1800,120);[console]::beep(4500,120);[console]::beep(1200,120)}') >/dev/null 2>&1 &
+
+
+(powershell.exe -c '$end=(Get-Date).AddSeconds(45); while((Get-Date)-lt $end){[console]::beep(5000,80);[console]::beep(5000,80);[console]::beep(1500,250);[console]::beep(4500,80);[console]::beep(1200,250)}') >/dev/null 2>&1 &
+
+
 
 echo "Played the sound at $(date)" >> log.txt
 
@@ -459,93 +481,73 @@ pkill update-notifier
 notify-send "Calendar event!"
 echo "About to open kdialog $(date)" >> log.txt
 echo 0s && nohup kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 30 moments to turn-off." && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 29 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 28 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 27 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 26 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 25 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 24 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 23 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 22 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 21 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 20 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 19 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 18 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 17 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 16 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 15 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 14 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 13 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 12 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 11 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 10 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 9 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 8 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 7 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 6 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 5 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 4 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 3 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 2 more moments to turn-off..."
-kdialog --msgbox "Calendar event! ALARM CLOCK, WAKE UP! Hold escape for 1 more moment to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 29 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 28 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 27 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 26 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 25 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 24 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 23 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 22 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 21 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 20 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 19 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 18 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 17 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 16 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 15 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 14 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 13 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 12 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 11 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 10 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 9 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 8 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 7 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 6 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 5 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 4 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 3 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 2 more moments to turn-off..."
-kdialog --msgbox "Almost turned off! ALARM CLOCK, WAKE UP! Hold escape for 1 more moment to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 29 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 28 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 27 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 26 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 25 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 24 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 23 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 22 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 21 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 20 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 19 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 18 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 17 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 16 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 15 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 14 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 13 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 12 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 11 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 10 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 9 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 8 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 7 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 6 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 5 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 4 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 3 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 2 more moments to turn-off..."
-kdialog --msgbox "Shutting off! ALARM CLOCK, WAKE UP! Hold escape for 1 more moment to turn-off..."
+
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+powershell.exe -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Close all of these message boxes to stop the alarm!','Notice','OK','Information')"
+
 echo "User dealt with the kdialogs $(date)" >> log.txt
 echo ""
 
@@ -553,6 +555,7 @@ sleep 1s
 #for i in {1..5}; do sleep 0.4s && notify-send "Note: Shave hands+face & clean glasses" && sleep 0.4s && notify-send "+ brush hair + fill bottle + dress + boots." && sleep 0.4s && notify-send " " && sleep 0.4s; done
 sleep 1s
 cd "$(dirname "$0")"
+cd windows-version
 #paplay $(pwd)/warning-beep.wav
 
 #espeak "The alarm has been shut-off."
@@ -572,6 +575,8 @@ kill -9 $(pgrep paplay)
 pkill aplay
 killall aplay
 kill -9 $(pgrep aplay)
+
+powershell.exe -NoProfile -Command "Stop-Process -Name powershell -Force"
 
 # Amazing speech synthesis, this is.
 echo 1s
@@ -611,3 +616,4 @@ espeak "dismissed."
 echo "Exiting noisemaker at $(date)" >> log.txt
 
 exit
+
