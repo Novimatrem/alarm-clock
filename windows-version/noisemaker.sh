@@ -265,6 +265,10 @@ sleep 30s # account for lag so we go off at exactly 10:00:00 mid-day
 
 powershell -c "(New-Object Media.SoundPlayer fly.wav).PlaySync();" &
 
+(powershell.exe -c '$player = New-Object System.Media.SoundPlayer "C:\Windows\Media\Alarm01.wav"; $player.PlayLooping(); $end = (Get-Date).AddSeconds(45); while ((Get-Date) -lt $end) { [console]::beep((Get-Random -Minimum 2500 -Maximum 4500), (Get-Random -Minimum 50 -Maximum 200)) }; $player.Stop()') >/dev/null 2>&1 &
+
+(powershell.exe -c '$end = (Get-Date).AddSeconds(45); while ((Get-Date) -lt $end) { [console]::beep(2500, 300); [console]::beep(2000, 300) }') >/dev/null 2>&1 &
+
 echo "Played the sound at $(date)" >> log.txt
 
 # absolute worst case scenario backup
